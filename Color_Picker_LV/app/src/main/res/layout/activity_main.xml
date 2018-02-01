@@ -6,9 +6,86 @@
     tools:context="com.nam.color_picker.MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="@string/hello_world"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewRed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:background="#FF0000"
+        android:text="@string/red_text"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/seekBarRed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewRed"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/textViewGreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBarRed"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:background="#00FF00"
+        android:text="@string/green_text"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/seekBarGreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewGreen"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/textViewBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBarGreen"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:background="#0000FF"
+        android:text="@string/blue_text"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/seekBarBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewBlue"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/seekBarBlue"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:background="#AABBCC"
+        android:text="@string/result_text"
+        android:textAlignment="center"
+        android:textStyle="bold" />
 
     <!-- view for AdMob Banner Ad -->
     <com.google.android.gms.ads.AdView
@@ -19,5 +96,6 @@
         android:layout_centerHorizontal="true"
         ads:adSize="BANNER"
         ads:adUnitId="@string/banner_ad_unit_id" />
+
 
 </RelativeLayout>
