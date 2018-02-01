@@ -82,7 +82,7 @@
         android:layout_below="@+id/seekBarBlue"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
-        android:background="#AABBCC"
+        android:background="#FFFFFF"
         android:text="@string/result_text"
         android:textAlignment="center"
         android:textStyle="bold" />
