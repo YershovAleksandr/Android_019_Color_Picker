@@ -3,7 +3,6 @@ package com.nam.color_picker;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -33,6 +32,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Load an ad into the AdMob banner view.
+        AdView adView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().setRequestAgent("android_studio:ad_template").build();
+        adView.loadAd(adRequest);
+
+
         mRedView = findViewById(R.id.textViewRed);
         mGreenView = findViewById(R.id.textViewGreen);
         mBlueView = findViewById(R.id.textViewBlue);
@@ -51,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
         mBlue = 255;
 
         ChangeResultColor();
-        //mResultView.setBackgroundColor(0xFFFFFFFF);
 
         mRedSeek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -100,12 +104,6 @@ public class MainActivity extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
             }
         });
-
-
-        // Load an ad into the AdMob banner view.
-    /*    AdView adView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().setRequestAgent("android_studio:ad_template").build();
-        adView.loadAd(adRequest);*/
 
     }
 
